@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+  Authors: Daniel Sahlin (Hatt3n) and Christian Stjernberg (christian-stj)
+-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Visualising GitHub</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" value="octokit" placeholder="user/org" id="ownerField">
+      <input type="text" value="rest.js" placeholder="repository" id="repoField">
+      <input type="checkbox" id="hideFiles" value="" style="width: 20px;height: 20px;">
+      <label for="hideFiles">Hide files</label>
+      <button type="button" onclick="getRepo()">Submit</button>
+      <button type="button" onClick="toggleDarkMode()">Toggle Dark</button>
+    </form>
+
+    <div id="container" style="position:relative;">
+
+    </div>
+
+    <script src="octokit-rest.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="index.js"></script>
+    <style>
+      button, div, input, label {font-family: "Helvetica Neue", Helvetica, sans-serif;font-size:20px;}
+    </style>
+  </body>
+</html>
